@@ -71,7 +71,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   }); 
-  fs.appendFileSync("README.md", ('## Installation')+ '\n' + (data.Installation), function(err) {
+  fs.appendFileSync("README.md", ('## Installation')+ '\n' + (data.Installation) +'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -80,7 +80,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md", ('## Usage')+ '\n' + (data.Usage), function(err) {
+  fs.appendFileSync("README.md", ('## Usage')+ '\n' + (data.Usage) +'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -89,7 +89,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });  
-  fs.appendFileSync("README.md", ('## Licence')+ '\n' + (data.Licence), function(err) {
+  fs.appendFileSync("README.md", ('## Licence')+ '\n' + (data.License) +'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -98,7 +98,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md", ('## Contributing')+ '\n' + (data.Contributing), function(err) {
+  fs.appendFileSync("README.md", ('## Contributing')+ '\n' + (data.Contributing) +'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -107,7 +107,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   }); 
-  fs.appendFileSync("README.md", ('## Test')+ '\n' + (data.Test), function(err) {
+  fs.appendFileSync("README.md", ('## Test')+ '\n' + (data.Test) +'\n', function(err) {
 
     if (err) {
       console.log(err);
