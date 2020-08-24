@@ -1,6 +1,13 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
 
+//if statement to delete previous created readme file
+var filePath = "README.md"
+
+if (fs.existsSync(filePath)) {
+  fs.unlinkSync(filePath);
+};
+//prompt questions
 inquirer.prompt([
   {
     type: "input",

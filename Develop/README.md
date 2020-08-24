@@ -1,14 +1,14 @@
-# Read me Generator
-it an app that generate a readme file using Node Js
+# Hello
+
 ## Installation
-npm i inquirer
+
 ## Usage
-It's free to use
+
 ## Licence
-MIT
+GNU AGPLv3
 ## Contributing
-feel free to improve it
+
 ## Test
-test
+
 ## Questions
-Contact me kevkouadio@gmail.com
+Contact me 
