@@ -49,18 +49,80 @@ inquirer.prompt([
   {
     type: "input",
     message: "Can you leave your email address for allowing users to contact you?",
-    name: "Questions",
+    name: "Email",
   },
-]);
+]).then(function(data) {
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+  fs.appendFileSync("README.md",  (`# ${data.Title}`) + '\n', function(err) {
 
-// function to initialize program
-function init() {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md",  (data.Description) + '\n' , function(err) {
 
-}
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  }); 
+  fs.appendFileSync("README.md", ('## Installation')+ '\n' + (data.Installation), function(err) {
 
-// function call to initialize program
-init();
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md", ('## Usage')+ '\n' + (data.Usage), function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });  
+  fs.appendFileSync("README.md", ('## Licence')+ '\n' + (data.Licence), function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md", ('## Contributing')+ '\n' + (data.Contributing), function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  }); 
+  fs.appendFileSync("README.md", ('## Test')+ '\n' + (data.Test), function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me ') + (data.Email), function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+})
