@@ -1,6 +1,6 @@
-# Read me gene
+# Readme Generator
 ## Description
-it is the best app ever
+it is an app that generate readme.md file
 ## Table of contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -10,14 +10,14 @@ it is the best app ever
 * [Test](#Test)
 * [Questions](#Questions)
 ## Installation
-i npm inquier
+it is a good app
 ## Usage
-it is a class activity
+it is a good app 
 ## Licence
 MIT
 ## Contributing
-feel free to improve it
+feel free to improve it and contact me
 ## Test
-npm test
+i npm test
 ## Questions
-Contact me kevkouadio@gmail.com
+Contact me: kevkouadio@gmail.com

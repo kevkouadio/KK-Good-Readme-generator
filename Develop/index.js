@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+//variable to store table of content
 var tableOfContents = `* [Description](#Description)
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -38,8 +39,13 @@ inquirer.prompt([
     name: "Usage",
   },
   {
+    type: "input",
+    message: "What does the user need to know about contributing to this repo?",
+    name: "Contributing",
+  },
+  {
     type: "list",
-    message: "What Licence would you like?",
+    message: "Select a License!",
     name: "License",
     choices: [
         "GNU AGPLv3",
@@ -53,17 +59,12 @@ inquirer.prompt([
   },
   {
     type: "input",
-    message: "What does the user need to know about contributing to this repo?",
-    name: "Contributing",
-  },
-  {
-    type: "input",
     message: "What does the user need to run a test?",
     name: "Test",
   },
   {
     type: "input",
-    message: "Can you leave your email address for allowing users to contact you?",
+    message: "What is your email address?",
     name: "Email",
   },
 ]).then(function(data) {
@@ -141,7 +142,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me ') + (data.Email), function(err) {
+  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me: ') + (data.Email), function(err) {
 
     if (err) {
       console.log(err);
@@ -150,4 +151,5 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
+  console.log("README file created!");
 })
