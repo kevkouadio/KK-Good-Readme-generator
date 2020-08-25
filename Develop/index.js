@@ -73,6 +73,11 @@ inquirer.prompt([
     message: "Paste the link of your screenshot:",
     name: "Screenshot",
   },
+  {
+    type: "input",
+    message: "Paste the link of your badge:",
+    name: "Badge",
+  },
 ]).then(function(data) {
 
   fs.appendFileSync("README.md",  (`# ${data.Title}`) + '\n', function(err) {
@@ -157,7 +162,16 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me: ') + (data.Email), function(err) {
+  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me: ') + (data.Email) +'\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md",+'\n'+ '![]'+'('+(data.Badge)+')', function(err) {
 
     if (err) {
       console.log(err);
