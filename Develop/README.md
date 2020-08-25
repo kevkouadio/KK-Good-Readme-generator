@@ -1,6 +1,6 @@
-# Read me
+# Good README Generator
 ## Description
-okoko
+It is a command-line application that  allow for quick and easy generation of a project README from a user's input. This app allow a project creator to spend more time working on finishing the project and less time creating a good README.
 ## Table of contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -11,17 +11,17 @@ okoko
 * [Screenshot](#Screenshot)
 * [Questions](#Questions)
 ## Installation
-okokoko
+The app uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
 ## Usage
-okokok
+It is an open source project, so feel free to use it.
 ## Licence
-Boost Software 1.0
+MIT
 ## Contributing
-okokok
+I would be happy if you decide to improve it. All comments and suggestions are welcomed.
 ## Test
-oookok
+Test not available! 
 ## Screenshot
-![](https://miro.medium.com/max/2260/1*DB_f1cNCJkOLNAq5Iijz1g.png)
+![]()
 ## Questions
 Contact me: kevkouadio@gmail.com
-![](https://img.shields.io/badge/good%20-ok-blue)
+0![](https://img.shields.io/github/followers/kevkouadio?style=social)
