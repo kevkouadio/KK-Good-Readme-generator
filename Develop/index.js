@@ -7,6 +7,7 @@ var tableOfContents = `* [Description](#Description)
 * [License](#License)
 * [Contributing](#Contributing)
 * [Test](#Test)
+* [Screenshot](#Screenshot)
 * [Questions](#Questions)`
                         
 
@@ -66,6 +67,11 @@ inquirer.prompt([
     type: "input",
     message: "What is your email address?",
     name: "Email",
+  },
+  {
+    type: "input",
+    message: "Paste the link of your screenshot:",
+    name: "Screenshot",
   },
 ]).then(function(data) {
 
@@ -134,6 +140,15 @@ inquirer.prompt([
     }
   }); 
   fs.appendFileSync("README.md", ('## Test')+ '\n' + (data.Test) +'\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+  fs.appendFileSync("README.md", ('## Screenshot')+ '\n' + '![]'+'('+(data.Screenshot)+')'+'\n', function(err) {
 
     if (err) {
       console.log(err);
