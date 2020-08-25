@@ -1,5 +1,13 @@
 var inquirer = require("inquirer");
-var fs = require('fs');
+var fs = require("fs");
+var tableOfContents = `* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Test](#Test)
+* [Questions](#Questions)`
+                        
 
 //if statement to delete previous created readme file
 var filePath = "README.md"
@@ -69,7 +77,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md",  (data.Description) + '\n' , function(err) {
+  fs.appendFileSync("README.md", ('## Description')+ '\n' + (data.Description) + '\n' , function(err) {
 
     if (err) {
       console.log(err);
@@ -78,6 +86,15 @@ inquirer.prompt([
       console.log("Success!");
     }
   }); 
+  fs.appendFileSync("README.md", ('## Table of contents')+ '\n' + (tableOfContents) +'\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
   fs.appendFileSync("README.md", ('## Installation')+ '\n' + (data.Installation) +'\n', function(err) {
 
     if (err) {
@@ -87,6 +104,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
+
   fs.appendFileSync("README.md", ('## Usage')+ '\n' + (data.Usage) +'\n', function(err) {
 
     if (err) {
