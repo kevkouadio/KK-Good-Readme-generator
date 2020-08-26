@@ -162,7 +162,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me: ') + (data.Email) +'\n', function(err) {
+  fs.appendFileSync("README.md", ('## Questions')+ '\n' + ('Contact me: ') + (data.Email) +'\n'+'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -171,7 +171,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md",+'\n'+ '![]'+'('+(data.Badge)+')', function(err) {
+  fs.appendFileSync("README.md",'![]'+'('+(data.Badge)+')', function(err) {
 
     if (err) {
       console.log(err);
