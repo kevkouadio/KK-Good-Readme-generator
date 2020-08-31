@@ -29,4 +29,4 @@ Test not available!
 ## Questions
 Contact me: kevkouadio@gmail.com
 
-My Github: github.com/kevkouadio
+My Github: http://github.com/kevkouadio

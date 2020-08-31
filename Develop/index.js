@@ -181,7 +181,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md",'My Github: '+'github.com/'+(data.github), function(err) {
+  fs.appendFileSync("README.md",'My Github: '+'http://github.com/'+(data.github), function(err) {
 
     if (err) {
       console.log(err);
