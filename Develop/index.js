@@ -75,12 +75,22 @@ inquirer.prompt([
   },
   {
     type: "input",
-    message: "Paste the link of your badge:",
-    name: "Badge",
+    message: "What is your Github username?",
+    name: "github",
   },
 ]).then(function(data) {
 
   fs.appendFileSync("README.md",  (`# ${data.Title}`) + '\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Success!");
+    }
+  });
+
+  fs.appendFileSync("README.md",'![]'+'(https://img.shields.io/badge/license-'+(data.License)+'-blue'+')'+'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -126,7 +136,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });  
-  fs.appendFileSync("README.md", ('## Licence')+ '\n' + (data.License) +'\n', function(err) {
+  fs.appendFileSync("README.md", ('## Licence')+ '\n' +'This app is under the '+ (data.License)+' License.'+'\n', function(err) {
 
     if (err) {
       console.log(err);
@@ -171,7 +181,7 @@ inquirer.prompt([
       console.log("Success!");
     }
   });
-  fs.appendFileSync("README.md",'![]'+'('+(data.Badge)+')', function(err) {
+  fs.appendFileSync("README.md",'My Github: '+'github.com/'+(data.github), function(err) {
 
     if (err) {
       console.log(err);
